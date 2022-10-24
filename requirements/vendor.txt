@@ -1,0 +1,9 @@
+-f https://download.pytorch.org/whl/cu116/torch_stable.html
+
+ipykernel
+ipython
+ipywidgets
+iterative-stratification==0.1.7
+pandas
+torch==1.12.1+cu116
+transformers==4.20.1
