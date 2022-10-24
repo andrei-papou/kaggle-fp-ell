@@ -29,3 +29,6 @@ RUN curl -sS https://starship.rs/install.sh > install_starship.sh && \
     chmod +x install_starship.sh && \
     ./install_starship.sh --yes \
     && echo "eval \"\$(starship init bash)\"" >> ~/.bashrc
+
+RUN git config --global user.name "andrei-papou" && \
+	git config --global user.email "andrei.v.papou@gmail.com"
