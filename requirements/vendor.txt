@@ -2,8 +2,9 @@
 
 ipykernel
 ipython
-ipywidgets
+ipywidgets==7.*
 iterative-stratification==0.1.7
 pandas
+protobuf~=3.20
 torch==1.12.1+cu116
 transformers==4.20.1
