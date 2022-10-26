@@ -22,6 +22,7 @@ RUN mkdir /root/.virtualenvs && mkdir /root/.requirements
 COPY requirements /root/.requirements/kaggle-fp-ell
 RUN python3.10 -m venv /root/.virtualenvs/kaggle-fp-ell
 RUN PATH="/root/.virtualenvs/kaggle-fp-ell/bin:$PATH" pip install -r /root/.requirements/kaggle-fp-ell/vendor.txt
+ARG CACHEBUST=1
 RUN PATH="/root/.virtualenvs/kaggle-fp-ell/bin:$PATH" pip install -U -r /root/.requirements/kaggle-fp-ell/private.txt
 
 # Install starship shell
