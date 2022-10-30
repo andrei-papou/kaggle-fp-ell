@@ -1,0 +1,1 @@
+git+https://${GITHUB_TOKEN}@github.com/andrei-papou/kaggle-toolbox.git@main#egg=kaggle_toolbox[remote,wandb]
