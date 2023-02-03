@@ -1,6 +1,6 @@
 ## FP-ELL Competition Solution
 
-27-th place solution of [Feedback Prize - English Language Learning](https://www.kaggle.com/competitions/feedback-prize-english-language-learning)
+27-th place solution for [Feedback Prize - English Language Learning](https://www.kaggle.com/competitions/feedback-prize-english-language-learning)
 
 Most of the notebooks use [kaggle-toolbox](https://github.com/andrei-papou/kaggle-toolbox) library under the hood.
 
