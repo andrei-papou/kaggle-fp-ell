@@ -20,6 +20,15 @@ RUN apt update && apt install -y \
 	python3.10-dev \
 	python3.10-venv
 
+# Install starship shell
+RUN curl -sS https://starship.rs/install.sh > install_starship.sh && \
+    chmod +x install_starship.sh && \
+    ./install_starship.sh --yes \
+    && echo "eval \"\$(starship init bash)\"" >> ~/.bashrc
+
+RUN git config --global user.name "andrei-papou" && \
+	git config --global user.email "andrei.v.papou@gmail.com"
+
 RUN mkdir /root/.virtualenvs && mkdir /root/.requirements
 
 RUN mkdir /root/.requirements/kaggle-fp-ell
@@ -33,12 +42,3 @@ ARG CACHEBUST=1
 # Always reinstall github dependencies as there is no way to track version change.
 COPY requirements/github.txt /root/.requirements/kaggle-fp-ell/github.txt
 RUN PATH="/root/.virtualenvs/kaggle-fp-ell/bin:$PATH" pip install -U -r /root/.requirements/kaggle-fp-ell/github.txt
-
-# Install starship shell
-RUN curl -sS https://starship.rs/install.sh > install_starship.sh && \
-    chmod +x install_starship.sh && \
-    ./install_starship.sh --yes \
-    && echo "eval \"\$(starship init bash)\"" >> ~/.bashrc
-
-RUN git config --global user.name "andrei-papou" && \
-	git config --global user.email "andrei.v.papou@gmail.com"
